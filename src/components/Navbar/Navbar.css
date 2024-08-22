@@ -1,0 +1,139 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5rem;
+   position: fixed;
+  z-index: 5;
+  width: 100%;
+  transition: 0.4s;
+  top: 0;
+}
+.activee{
+  background-color: #121212;
+}
+.navbar .logo {
+  width: 10rem;
+}
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar button {
+  background-color: transparent;
+  border: 1px solid tomato;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.4rem 1.5rem;
+  border-radius: 3rem;
+  transition: 0.4s;
+  color: #fff;
+}
+.navbar button:hover {
+  background-color: tomato;
+  color: #fff;
+}
+.navbar .active {
+  border-bottom: 0.125rem solid #fff;
+}
+.navbar-searvh-icon {
+  position: relative;
+}
+.navbar-searvh-icon .dot {
+  position: absolute;
+  background-color: tomato;
+  min-height: 0.5rem;
+  min-width: 0.5rem;
+  border-radius: 50%;
+  right: -0.25rem;
+  top: -0.25rem;
+}
+#menu{
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 8.75rem;
+
+  }
+  .navbar-menu {
+    gap: 1rem;
+    font-size: 1.063rem;
+  }
+  .navbar-right {
+    gap: 1rem;
+  }
+  .navbar-right img {
+    width: 1.5rem;
+  }
+  .navbar-right button {
+    padding: 0.375rem 1.25rem;
+  }
+}
+@media (max-width: 900px) {
+  .navbar {
+    padding: 1.5rem 3rem;
+  }
+  .navbar .logo {
+    width: 8.75rem;
+  }
+  .navbar-menu {
+    gap: 0.938rem;
+    font-size: 1rem;
+
+  }
+  .navbar-right {
+    gap: 1.25rem;
+  }
+  .navbar-right img {
+    width: 1.25rem;
+  }
+  .navbar-right button {
+    padding: 0.438rem 1.25rem;
+    font-size: 0.938rem;
+  }
+}
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 85px;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: #121212;
+    z-index: 5;
+    transition: 0.5s;
+    list-style: none;
+    gap: 2rem;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  .open{
+    right: -300px;
+  }
+  #menu{
+    display: block;
+
+  }
+}
+@media (max-width: 500px) {
+  .navbar{
+    padding: 1.5rem 1rem;
+  }
+}
